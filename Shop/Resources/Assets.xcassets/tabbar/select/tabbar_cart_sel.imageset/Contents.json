@@ -5,12 +5,11 @@
       "scale" : "1x"
     },
     {
-      "filename" : "tabbar_cart_sel@2x.png",
+      "filename" : "tabbar_cart_sel.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "tabbar_cart_sel@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -29,7 +29,7 @@ class HomeBannerView: UIView {
     
     lazy var pageControl: UIPageControl = {
         let pageControl = UIPageControl.init(frame: CGRect.zero)
-        pageControl.numberOfPages = 3
+        pageControl.numberOfPages = 5
         pageControl.currentPage = 0
         pageControl.currentPageIndicatorTintColor = UIColor.hex(hexString: "0x2F69F8")
         pageControl.pageIndicatorTintColor = UIColor.hex(hexString: "0xE0E0E0")
@@ -46,13 +46,19 @@ class HomeBannerView: UIView {
     typealias selectBlock = (_ indexPath: IndexPath) ->()
     var didSelectBlock: selectBlock!
     
+    lazy var imageUrls: [String] = []
+    lazy var homePage: [HomePage?] = []
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+//        for index in 0..<images.count {
+//            print(images[index])
+//        }
+
         addGradientLayer()
         
         self.addSubview(collectionView)
-        let index: IndexPath = IndexPath.init(row: 51, section: 0)
+        let index: IndexPath = IndexPath.init(row: 0, section: 0)
         collectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: false)
         currentIndex = 51
         
@@ -94,7 +100,7 @@ class HomeBannerView: UIView {
     @objc fileprivate func nextCell() {
         currentIndex += 1
         let index: IndexPath = IndexPath.init(row: currentIndex, section: 0)
-        collectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
+        //collectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
         
         resetPage()
     }
@@ -115,6 +121,15 @@ class HomeBannerView: UIView {
     func stop() {
         self.pause()
         self.releaseTimer()
+    }
+    
+    func setImageUrls(imageUrls: [String]) {
+        self.imageUrls = imageUrls
+    }
+    
+    func setHomePage(homePage: [HomePage?]) {
+        self.homePage = homePage
+        self.collectionView.reloadData()
     }
     
     // 释放timer资源,防止内存泄漏
@@ -150,7 +165,7 @@ class HomeBannerView: UIView {
     }
     
     func resetPage() {
-        let page = currentIndex % 3
+        let page = currentIndex % 5
         pageControl.currentPage = page
     }
     
@@ -198,7 +213,7 @@ extension HomeBannerView: UIScrollViewDelegate {
         }
         
         let index: IndexPath = IndexPath.init(row: currentIndex, section: 0)
-        collectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: animation)
+        //collectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: animation)
     }
     
     // 结束减速
@@ -230,12 +245,24 @@ extension HomeBannerView: UICollectionViewDelegate {
 extension HomeBannerView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        100
+        5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cellString = "HomeBannerCell"
         let cell: HomeBannerCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellString, for: indexPath) as! HomeBannerCell
+        
+        if homePage.count > indexPath.row {
+            if let home = homePage[indexPath.row] {
+                let url = URL(string: (home.image)!)
+                cell.imageView.kf.setImage(with: url)
+                
+                cell.nameLabel.text = (home.name)
+                cell.introduceLabel.text = (home.subTitle)
+                cell.priceLabel.text = "¥" + String((home.price ?? 9999))
+            }
+        }
+        
         return cell
     }
     
@@ -245,8 +272,8 @@ class HomeBannerCell: UICollectionViewCell {
     
     lazy var imageView: UIImageView = {
         //https://s3-ap-northeast-1.amazonaws.com/sanwa.co.jp/HomePage/pet3.jpg
-        //let imageView = UIImageView.init()
-        let imageView = UIImageView.init(image: UIImage.init(named: "home_banner"))
+        let imageView = UIImageView.init()
+        //let imageView = UIImageView.init(image: UIImage.init(named: "home_banner"))
         
 //        let url = URL(string: "https://s3-ap-northeast-1.amazonaws.com/sanwa.co.jp/HomePage/pet3.jpg")
 //        DispatchQueue.global().async {
@@ -294,7 +321,7 @@ class HomeBannerCell: UICollectionViewCell {
     
     lazy var introduceLabel: UILabel = {
         let label = UILabel.init(frame: CGRect.zero)
-        label.text = "Long 3/4 sleevs, sweartshirt"
+        //label.text = "Long 3/4 sleevs, sweartshirt"
         label.textColor = UIColor.hex(hexString: "0x6A6A6A")
         label.font = UIFont.systemFont(ofSize: 12)
         return label

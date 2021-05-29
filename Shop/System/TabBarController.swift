@@ -37,6 +37,9 @@ class TabBarController: UITabBarController {
         addChildViewController(searchVC,
                                image: UIImage(named: "tabbar_search"),
                                selectedImage: UIImage(named: "tabbar_search_sel"))
+        
+        let tabBar = CustomTabView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 100))
+        self.setValue(tabBar, forKey: "tabBar")
     }
     
 

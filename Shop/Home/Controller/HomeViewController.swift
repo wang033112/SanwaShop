@@ -19,10 +19,25 @@ class HomeViewController: BaseViewController {
         return likeView
     }()
     
+    override func viewWillAppear(_ animated: Bool) {
+        SanwaShopProvider.request(.homePage) {(result) in
+            switch result {
+            case let .success(response):
+                // 解析数据
+                let jsonString = String(data: response.data, encoding: .utf8)
+                if let home = [HomePage].deserialize(from: jsonString) {
+                    self.bannerView.setHomePage(homePage: home)
+                }
+                
+            case let .failure(error):
+                print(error)
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.titleLabel.text = "New Collection"
+        self.titleLabel.text = "三和"
         
         bannerView.didSelectBlock = {
             [weak self] in
