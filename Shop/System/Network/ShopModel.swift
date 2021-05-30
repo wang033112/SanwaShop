@@ -26,6 +26,16 @@ class HomePage : HandyJSON {
     required init() {}
 }
 
+class Product : HandyJSON {
+    var id: String!          //
+    var image: String!       //
+    var name: String!         //
+    var subTitle: String!
+    var price: Int!
+    
+    required init() {}
+}
+
 class realtime : HandyJSON {
     var temperature: String!    // 温度
     var humidity: String!       // 湿度

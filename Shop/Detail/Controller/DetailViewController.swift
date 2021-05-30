@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DetailViewController: UIViewController {
 
+    private var imageUrl: String = ""
+    private var productId: String = ""
+    
     lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView.init(frame: CGRect.init(x: 0, y: 0, width: screenWidth, height: screenHeight))
         scrollView.showsVerticalScrollIndicator = false
@@ -37,6 +41,20 @@ class DetailViewController: UIViewController {
         return likeView
     }()
     
+    init(withId pId: String, image img: String) {
+        super.init(nibName: nil, bundle: nil)
+        productId = pId
+        imageUrl = img
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //<#code#>
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,6 +64,7 @@ class DetailViewController: UIViewController {
     func setupUI() {
         self.view.backgroundColor = .white
 
+        self.headerView.imageView.kf.setImage(with: URL(string: self.imageUrl))
         self.view.addSubview(scrollView)
         
         headerView.closeButtonBlock = {

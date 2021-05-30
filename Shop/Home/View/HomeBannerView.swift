@@ -43,7 +43,7 @@ class HomeBannerView: UIView {
     // 自动滚动时间间隔,默认3s
     var timeInterval: TimeInterval = 3.0
 
-    typealias selectBlock = (_ indexPath: IndexPath) ->()
+    typealias selectBlock = (_ id: String, _ img: String) ->()
     var didSelectBlock: selectBlock!
     
     lazy var imageUrls: [String] = []
@@ -237,7 +237,9 @@ extension HomeBannerView: UICollectionViewDelegate {
     // 点击Banner
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let _ = didSelectBlock {
-            didSelectBlock(indexPath)
+            if let home = homePage[indexPath.row] {
+                didSelectBlock("homePage", home.image ?? "")
+            }
         }
     }
 }
