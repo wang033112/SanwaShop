@@ -38,7 +38,7 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.titleLabel.text = "三和"
+        self.titleLabel.text = "三和"
         
         bannerView.didSelectBlock = {(id, img) in
             //let detailVC = DetailViewController.init()
@@ -59,6 +59,7 @@ class HomeViewController: BaseViewController {
         scrollView.alwaysBounceVertical = true
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
+    
         if #available(iOS 11.0, *) {
             scrollView.contentInsetAdjustmentBehavior = .never
         } else {
@@ -94,9 +95,17 @@ class HomeViewController: BaseViewController {
 //
         let tView = UIView(frame: CGRect.init(x: 0, y: 717, width: UIScreen.main.bounds.width, height: 600))
         tView.addSubview(tableVC.view)
+//        tableVC.view.snp.makeConstraints{
+//            $0.top.equalToSuperview().inset(10)
+//        }
         //scroll.addSubview(tView)
 //
         scrollView.addSubview(tView)
+        tView.layer.shadowRadius = 5
+        tView.backgroundColor = UIColor.init(code: "#E3F2FD")
+        tView.layer.borderColor = UIColor.init(code: "#E3F2FD").cgColor
+        tView.layer.borderWidth = 2
+        
 //        tView.snp.makeConstraints{
 //            $0.top.equalTo(likeView.snp.bottom)
 //            $0.topMargin.equalTo(20)

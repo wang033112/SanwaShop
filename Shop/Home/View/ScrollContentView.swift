@@ -62,9 +62,9 @@ class HomeContentViewCell: UITableViewCell {
             print("Item didset ")
             icon.image = UIImage(named: item?.imageUrl ?? "James")
             title.text = item?.name
-            labelA.text = "TYPEA"
-            labelB.text = "TYPEB"
-            total.text = "220k Views"
+            labelA.text = "NEW"
+            labelB.text = "ON SALE"
+            total.text = "¥3000(税込)"
         }
     }
     
@@ -81,6 +81,8 @@ class HomeContentViewCell: UITableViewCell {
         let view = UIView(frame: CGRect(x:0, y:0, width: 240, height: 150))
         view.backgroundColor = UIColor.init(code: "#4A6572")
         
+        self.contentView.layer.shadowRadius = 5
+        self.contentView.backgroundColor = UIColor.init(code: "#E64A19")
         self.contentView.addSubview(icon)
         icon.layer.cornerRadius = 5
         icon.layer.masksToBounds = true
@@ -91,7 +93,7 @@ class HomeContentViewCell: UITableViewCell {
         })
         
         self.contentView.addSubview(title)
-        title.font = UIFont.systemFont(ofSize: 15)
+        title.font = UIFont.systemFont(ofSize: 12)
         title.textColor = UIColor.black
         title.snp.makeConstraints({ (make) in
             make.top.equalToSuperview().offset(10)
@@ -100,7 +102,7 @@ class HomeContentViewCell: UITableViewCell {
         })
         
         self.contentView.addSubview(labelA)
-        labelA.font = UIFont.systemFont(ofSize: 10)
+        labelA.font = UIFont.systemFont(ofSize:8)
         labelA.textColor = UIColor.init(code: "#E64A19")
         labelA.backgroundColor = UIColor.init(code: "#FFAB91")
         labelA.layer.cornerRadius = 10
@@ -112,7 +114,7 @@ class HomeContentViewCell: UITableViewCell {
         })
         
         self.contentView.addSubview(labelB)
-        labelB.font = UIFont.systemFont(ofSize: 10)
+        labelB.font = UIFont.systemFont(ofSize: 8)
         labelB.textColor = UIColor.init(code: "#00838F")
         labelB.backgroundColor = UIColor.init(code: "#80DEEA")
         labelB.layer.cornerRadius = 10
