@@ -71,4 +71,12 @@ extension UIColor {
         }
         self.init(red: r, green: g, blue: b, alpha: 1.0)
     }
+    
+    class var background: UIColor {
+        return UIColor(r: 242, g: 242, b: 242)
+    }
+    
+    class var theme: UIColor {
+        return UIColor(r: 29, g: 221, b: 43)
+    }
 }

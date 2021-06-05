@@ -28,23 +28,23 @@ struct HomeLikeModel {
     }
     
     static func defaultData() -> Array<HomeLikeModel> {
-        let product_1 = HomeLikeModel.init(pdImage: "home_like_product_1",
-                                          pdName: "Jacket in blue denim",
+        let product_1 = HomeLikeModel.init(pdImage: "product_history",
+                                          pdName: "履歴１",
                                           pdBrand: "Wrangler",
                                           isLike: false)
         
-        let product_2 = HomeLikeModel.init(pdImage: "home_like_product_2",
-                                          pdName: "Vans denim jacket",
+        let product_2 = HomeLikeModel.init(pdImage: "product_history",
+                                          pdName: "履歴２",
                                           pdBrand: "GUCCI",
                                           isLike: false)
 
-        let product_3 = HomeLikeModel.init(pdImage: "home_like_product_1",
-                                          pdName: "Jacket in blue denim",
+        let product_3 = HomeLikeModel.init(pdImage: "product_history",
+                                          pdName: "履歴３",
                                           pdBrand: "Wrangler",
                                           isLike: false)
         
-        let product_4 = HomeLikeModel.init(pdImage: "home_like_product_2",
-                                          pdName: "Vans denim jacket",
+        let product_4 = HomeLikeModel.init(pdImage: "product_history",
+                                          pdName: "履歴４",
                                           pdBrand: "GUCCI",
                                           isLike: false)
         return [product_1, product_2, product_3, product_4]

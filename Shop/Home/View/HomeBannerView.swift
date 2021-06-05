@@ -16,7 +16,7 @@ class HomeBannerView: UIView {
         layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
-        let collectView = UICollectionView.init(frame: CGRect.init(x: 0, y: 108, width: screenWidth, height: 349), collectionViewLayout: layout)
+        let collectView = UICollectionView.init(frame: CGRect.init(x: 0, y: 0, width: screenWidth, height: 349), collectionViewLayout: layout)
         collectView.backgroundColor = .clear
         collectView.isPagingEnabled = true
         collectView.delegate = self
@@ -76,7 +76,7 @@ class HomeBannerView: UIView {
     // 添加背景渐变
     func addGradientLayer() {
         let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = CGRect.init(x: 0, y: 0, width: screenWidth, height: 457)
+        gradientLayer.frame = CGRect.init(x: 0, y: 0, width: screenWidth, height: 350)
         self.layer.addSublayer(gradientLayer)
         let topColor = UIColor.hex(hexString: "0xFFFFFF").cgColor
         let bottomColor = UIColor.hex(hexString: "0xF8F8F8").cgColor

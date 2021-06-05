@@ -9,14 +9,30 @@ import UIKit
 
 class HomeViewController: BaseViewController {
     
+    let search_y = 50
+    let search_height = 30
+    
+    let scroll_y = 80
+    let header_Height = 50
+    
+    lazy var searchTextField: UITextField = {
+        let textField = UITextField.init(frame: CGRect.init(x: 20, y: search_y, width: Int(UIScreen.main.bounds.width) - 40, height: search_height))
+        textField.placeholder = " なにを探しですか？"
+        textField.font = UIFont.systemFont(ofSize: 13)
+        textField.layer.cornerRadius = 4
+        textField.layer.masksToBounds = true
+        textField.backgroundColor = UIColor.hex(hexString: "0xF4F4F4")
+        return textField
+    }()
+    
     lazy var bannerView: HomeBannerView = {
         //let bannerView = HomeBannerView.init(frame: CGRect.zero)
-        let bannerView = HomeBannerView.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 457))
+        let bannerView = HomeBannerView.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 350))
         return bannerView
     }()
     
     lazy var likeView: HomeLikeView = {
-        let likeView = HomeLikeView.init(frame: CGRect.init(x: 0, y: 467, width: UIScreen.main.bounds.width, height: 250))
+        let likeView = HomeLikeView.init(frame: CGRect.init(x: 0, y: 360, width: UIScreen.main.bounds.width, height: 120))
         return likeView
     }()
     
@@ -36,9 +52,8 @@ class HomeViewController: BaseViewController {
         }
     }
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.titleLabel.text = "三和"
+        //super.viewDidLoad()
+        self.view.addSubview(searchTextField)
         
         bannerView.didSelectBlock = {(id, img) in
             //let detailVC = DetailViewController.init()
@@ -47,7 +62,7 @@ class HomeViewController: BaseViewController {
             self.present(detailVC, animated: true, completion: {})
         }
         
-        let scrollView = UIScrollView(frame: self.view.bounds)
+        let scrollView = UIScrollView(frame: CGRect.init(x: 0, y: CGFloat(scroll_y), width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
         //scroll.alwaysBounceVertical = true
 //        scroll.alwaysBounceVertical = true
 //        scroll.isPagingEnabled = true
@@ -93,7 +108,7 @@ class HomeViewController: BaseViewController {
         let tableVC = HomeTableViewController()
         self.addChild(tableVC)
 //
-        let tView = UIView(frame: CGRect.init(x: 0, y: 717, width: UIScreen.main.bounds.width, height: 600))
+        let tView = UIView(frame: CGRect.init(x: 0, y: 500, width: UIScreen.main.bounds.width, height: 600))
         tView.addSubview(tableVC.view)
 //        tableVC.view.snp.makeConstraints{
 //            $0.top.equalToSuperview().inset(10)
@@ -103,7 +118,7 @@ class HomeViewController: BaseViewController {
         scrollView.addSubview(tView)
         tView.layer.shadowRadius = 5
         tView.backgroundColor = UIColor.init(code: "#E3F2FD")
-        tView.layer.borderColor = UIColor.init(code: "#E3F2FD").cgColor
+        //tView.layer.borderColor = UIColor.init(code: "#E3F2FD").cgColor
         tView.layer.borderWidth = 2
         
 //        tView.snp.makeConstraints{

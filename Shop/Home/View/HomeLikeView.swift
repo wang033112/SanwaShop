@@ -11,21 +11,21 @@ class HomeLikeView: UIView {
 
     lazy var titleLabel: UILabel = {
         let label = UILabel.init(frame: CGRect.zero)
-        label.text = "You may like"
+        label.text = "おすすめ商品"
         label.textColor = UIColor.black
-        label.font = UIFont.systemFont(ofSize: 20)
+        label.font = UIFont.systemFont(ofSize: 14)
         return label
     }()
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout.init()
-        layout.itemSize = CGSize(width: 130 , height: 220)
+        layout.itemSize = CGSize(width: 130 , height: 90)
         layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
         layout.minimumLineSpacing = 20
         layout.minimumInteritemSpacing = 10
         layout.headerReferenceSize = CGSize.init(width: 20, height: 160)
         layout.footerReferenceSize = CGSize.init(width: 20, height: 160)
-        let collectView = UICollectionView.init(frame: CGRect.init(x: 0, y: 30, width: screenWidth, height: 220), collectionViewLayout: layout)
+        let collectView = UICollectionView.init(frame: CGRect.init(x: 0, y: 30, width: screenWidth, height: 90), collectionViewLayout: layout)
         collectView.backgroundColor = .white
         collectView.delegate = self
         collectView.dataSource = self

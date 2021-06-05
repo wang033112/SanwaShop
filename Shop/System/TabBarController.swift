@@ -33,10 +33,10 @@ class TabBarController: UITabBarController {
                                selectedImage: UIImage(named: "tabbar_cart_sel"))
         
         // Search
-        let searchVC = SearchViewController()
+        let searchVC = UMineViewController()
         addChildViewController(searchVC,
-                               image: UIImage(named: "tabbar_search"),
-                               selectedImage: UIImage(named: "tabbar_search_sel"))
+                               image: UIImage(named: "tabbar_my"),
+                               selectedImage: UIImage(named: "tabbar_my_sel"))
         
         let tabBar = CustomTabView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 100))
         self.setValue(tabBar, forKey: "tabBar")
