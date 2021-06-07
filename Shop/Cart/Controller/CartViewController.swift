@@ -60,7 +60,7 @@ class CartViewController: BaseViewController {
             $0.left.equalTo(self.view.snp.left).offset(20)
             $0.top.equalTo(self.titleLine.snp.bottom).offset(20)
             $0.right.equalTo(self.view.snp.right).offset(-20)
-            $0.height.equalTo(80)
+            $0.height.equalTo(50)
         }
         
         settlementView.settlementClickBlock = {

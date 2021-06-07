@@ -9,9 +9,21 @@ import UIKit
 
 class CartDiscountView: UIView {
 
-    lazy var bgImageView: UIImageView = {
-        let imageView = UIImageView.init(image: UIImage.init(named: "cart_discount_bg"))
-        return imageView
+//    lazy var bgImageView: UIView = {
+//        let bgView = UIView.init(frame: CGRect(x: 10, y: 0, width: UIScreen.main.bounds.width - 20, height: 100))
+//        bgView.backgroundColor = UIColor.hex(hexString: "#E3F2FD")
+//        bgView.layer.cornerRadius = 10
+//        return bgView
+//    }()
+    
+    lazy var gotoPayButton: UIButton = {
+        let bt = UIButton.init(frame: .zero)
+        bt.backgroundColor = UIColor.hex(hexString: "#FFCC80")
+        bt.setTitle("レジに進む(¥6，000)（税込）", for: UIControl.State.normal)
+        bt.setTitleColor(UIColor.hex(hexString: "#E65100"), for: UIControl.State.normal)
+        bt.setBackgroundColor(color: UIColor.hex(hexString: "#FFA726"), forState: UIControl.State.highlighted)
+        bt.layer.cornerRadius = 10
+        return bt
     }()
     
     lazy var discountImageView: UIImageView = {
@@ -29,9 +41,10 @@ class CartDiscountView: UIView {
     
     lazy var describeLabel: UILabel = {
         let label = UILabel.init(frame: CGRect.zero)
-        label.text = "Enjoy Student Discount"
-        label.textColor = UIColor.hex(hexString: "0x6A6A6A")
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.text = "合計：￥６０００（税込）"
+        label.textColor = UIColor.black
+
+        label.font = UIFont.systemFont(ofSize: 20)
         return label
     }()
     
@@ -47,36 +60,17 @@ class CartDiscountView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.addSubview(bgImageView)
-        bgImageView.snp.makeConstraints {
-            $0.left.top.bottom.equalTo(self)
+        self.addSubview(gotoPayButton)
+        gotoPayButton.snp.makeConstraints {
+            $0.left.top.equalTo(self)
             $0.width.equalTo(screenWidth - 40)
-        }
-        
-        self.addSubview(discountImageView)
-        discountImageView.snp.makeConstraints {
-            $0.left.equalTo(self.snp.left).offset(25)
-            $0.centerY.equalTo(self.snp.centerY)
-        }
-        
-        self.addSubview(discountLabel)
-        discountLabel.snp.makeConstraints {
-            $0.left.equalTo(discountImageView.snp.right).offset(25)
-            $0.top.equalTo(discountImageView.snp.top).offset(10)
+            $0.height.equalTo(50)
         }
 
-        self.addSubview(describeLabel)
-        describeLabel.snp.makeConstraints {
-            $0.left.equalTo(discountImageView.snp.right).offset(25)
-            $0.bottom.equalTo(discountImageView.snp.bottom)
-        }
-        
-        self.addSubview(giftLabel)
-        giftLabel.snp.makeConstraints {
-            $0.right.equalTo(self.snp.right)
-            $0.centerY.equalTo(self.snp.centerY)
-            $0.width.equalTo(75)
-        }
+//        self.addSubview(describeLabel)
+//        describeLabel.snp.makeConstraints {
+//            $0.bottom.equalToSuperview()
+//        }
         
     }
     

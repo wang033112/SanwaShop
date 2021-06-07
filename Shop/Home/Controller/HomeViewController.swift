@@ -9,14 +9,25 @@ import UIKit
 
 class HomeViewController: BaseViewController {
     
-    let search_y = 50
-    let search_height = 30
+    static let search_y = 50
+    static let search_height = 30
     
-    let scroll_y = 80
-    let header_Height = 50
+    static let scroll_y = search_y + search_height
+    static let bannerHeight = 350
+    
+    static let likeView_Y = bannerHeight + 10
+    static let likeViewHeight = 120
+    
+    static let contentLabelY = likeView_Y + likeViewHeight + 20
+    static let contentLabelHeight = 20
+    
+    static let contentViewY = contentLabelY + contentLabelHeight + 10
+    static let contentViewHeight = 500
+    
+    static let header_Height = 50
     
     lazy var searchTextField: UITextField = {
-        let textField = UITextField.init(frame: CGRect.init(x: 20, y: search_y, width: Int(UIScreen.main.bounds.width) - 40, height: search_height))
+        let textField = UITextField.init(frame: CGRect.init(x: 20, y: HomeViewController.search_y, width: Int(UIScreen.main.bounds.width) - 40, height: HomeViewController.search_height))
         textField.placeholder = " なにを探しですか？"
         textField.font = UIFont.systemFont(ofSize: 13)
         textField.layer.cornerRadius = 4
@@ -27,13 +38,21 @@ class HomeViewController: BaseViewController {
     
     lazy var bannerView: HomeBannerView = {
         //let bannerView = HomeBannerView.init(frame: CGRect.zero)
-        let bannerView = HomeBannerView.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 350))
+        let bannerView = HomeBannerView.init(frame: CGRect.init(x: 0, y: 0, width: Int(UIScreen.main.bounds.width), height: HomeViewController.bannerHeight))
         return bannerView
     }()
     
     lazy var likeView: HomeLikeView = {
-        let likeView = HomeLikeView.init(frame: CGRect.init(x: 0, y: 360, width: UIScreen.main.bounds.width, height: 120))
+        let likeView = HomeLikeView.init(frame: CGRect.init(x: 0, y: HomeViewController.likeView_Y, width: Int(UIScreen.main.bounds.width), height: HomeViewController.likeViewHeight))
         return likeView
+    }()
+    
+    lazy var contentLabel: UILabel = {
+        let label = UILabel.init(frame: CGRect.init(x: 20, y: HomeViewController.contentLabelY, width: Int(UIScreen.main.bounds.width), height: HomeViewController.contentLabelHeight))
+        label.text = "人気商品ランキング"
+        label.textColor = UIColor.black
+        label.font = UIFont.systemFont(ofSize: 14)
+        return label
     }()
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,15 +81,9 @@ class HomeViewController: BaseViewController {
             self.present(detailVC, animated: true, completion: {})
         }
         
-        let scrollView = UIScrollView(frame: CGRect.init(x: 0, y: CGFloat(scroll_y), width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
-        //scroll.alwaysBounceVertical = true
-//        scroll.alwaysBounceVertical = true
-//        scroll.isPagingEnabled = true
-//        scroll.backgroundColor = .brown
-//        scroll.contentSize = CGSize.init(width: 0, height: 900)
-//        scroll.isScrollEnabled = true
-//        scroll.bounces = false
-        //scroll.contentSize.height = 3000
+        let scrollView = UIScrollView(frame: CGRect.init(x: 0, y: CGFloat(HomeViewController.scroll_y),
+                                                         width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+   
         scrollView.alwaysBounceVertical = true
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
@@ -81,52 +94,24 @@ class HomeViewController: BaseViewController {
             // Fallback on earlier versions
         }
         
-//        scroll.snp.makeConstraints {
-//            $0.left.right.top.equalTo(self.view)
-//        }
-        //scrollView.contentSize = CGSize.init(width: 0, height: 1500)
-        //CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height+300)
-        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height + 600)
+        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height + CGFloat(HomeViewController.contentViewHeight))
         self.view.addSubview(scrollView)
         
         scrollView.addSubview(bannerView)
-        
-        //self.view.sendSubviewToBack(bannerView)
-//        bannerView.snp.makeConstraints {
-//            $0.left.top.right.equalTo(self.view)
-//            $0.height.equalTo(457)
-//        }
-        
+
         scrollView.addSubview(likeView)
-        //self.view.addSubview(likeView)
-//        likeView.snp.makeConstraints {
-//            $0.left.right.equalTo(self.view)
-//            $0.top.equalTo(self.bannerView.snp.bottom).offset(10)
-//            $0.height.equalTo(250)
-//        }
-//
+        
+        scrollView.addSubview(contentLabel)
+
         let tableVC = HomeTableViewController()
         self.addChild(tableVC)
-//
-        let tView = UIView(frame: CGRect.init(x: 0, y: 500, width: UIScreen.main.bounds.width, height: 600))
+
+        let tView = UIView(frame: CGRect.init(x: 0, y: HomeViewController.contentViewY, width: Int(UIScreen.main.bounds.width), height: HomeViewController.contentViewHeight))
         tView.addSubview(tableVC.view)
-//        tableVC.view.snp.makeConstraints{
-//            $0.top.equalToSuperview().inset(10)
-//        }
-        //scroll.addSubview(tView)
-//
+        
+        
         scrollView.addSubview(tView)
         tView.layer.shadowRadius = 5
-        tView.backgroundColor = UIColor.init(code: "#E3F2FD")
-        //tView.layer.borderColor = UIColor.init(code: "#E3F2FD").cgColor
-        tView.layer.borderWidth = 2
-        
-//        tView.snp.makeConstraints{
-//            $0.top.equalTo(likeView.snp.bottom)
-//            $0.topMargin.equalTo(20)
-//        }
-        
-        
     }
 
 }

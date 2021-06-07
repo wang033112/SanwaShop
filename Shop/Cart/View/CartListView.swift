@@ -106,6 +106,8 @@ class CartListCell: UITableViewCell {
     
     lazy var pdImageView: UIImageView = {
         let imageView = UIImageView.init(frame: CGRect.zero)
+        imageView.layer.masksToBounds = true
+        imageView.layer.cornerRadius = 10
         return imageView
     }()
     

@@ -40,7 +40,7 @@ struct CartModel {
     }
     
     static func defaultData() -> Array<CartModel> {
-        let product_1 = CartModel.init(pdImage: "cart_product_1",
+        let product_1 = CartModel.init(pdImage: "product_img",
                                           pdName: "Jacket in blue denim",
                                           pdBrand: "Wrangler",
                                           pdSize: "S",
@@ -48,7 +48,7 @@ struct CartModel {
                                           pdQuantity: "1",
                                           pdPrice: "230")
         
-        let product_2 = CartModel.init(pdImage: "cart_product_2",
+        let product_2 = CartModel.init(pdImage: "product_img",
                                           pdName: "T-shirt Mark Lebon Julie",
                                           pdBrand: "Prada",
                                           pdSize: "S",
@@ -56,7 +56,47 @@ struct CartModel {
                                           pdQuantity: "1",
                                           pdPrice: "50")
         
-        let product_3 = CartModel.init(pdImage: "cart_product_3",
+        let product_3 = CartModel.init(pdImage: "product_img",
+                                          pdName: "Bananas pattern",
+                                          pdBrand: "Dior",
+                                          pdSize: "S",
+                                          pdColor: "0x2FAEF8",
+                                          pdQuantity: "1",
+                                          pdPrice: "150")
+        
+        let product_4 = CartModel.init(pdImage: "product_img",
+                                          pdName: "Bananas pattern",
+                                          pdBrand: "Dior",
+                                          pdSize: "S",
+                                          pdColor: "0x2FAEF8",
+                                          pdQuantity: "1",
+                                          pdPrice: "150")
+        
+        let product_5 = CartModel.init(pdImage: "product_img",
+                                          pdName: "Bananas pattern",
+                                          pdBrand: "Dior",
+                                          pdSize: "S",
+                                          pdColor: "0x2FAEF8",
+                                          pdQuantity: "1",
+                                          pdPrice: "150")
+        
+        let product_6 = CartModel.init(pdImage: "product_img",
+                                          pdName: "Bananas pattern",
+                                          pdBrand: "Dior",
+                                          pdSize: "S",
+                                          pdColor: "0x2FAEF8",
+                                          pdQuantity: "1",
+                                          pdPrice: "150")
+        
+        let product_7 = CartModel.init(pdImage: "product_img",
+                                          pdName: "Bananas pattern",
+                                          pdBrand: "Dior",
+                                          pdSize: "S",
+                                          pdColor: "0x2FAEF8",
+                                          pdQuantity: "1",
+                                          pdPrice: "150")
+        
+        let product_8 = CartModel.init(pdImage: "product_img",
                                           pdName: "Bananas pattern",
                                           pdBrand: "Dior",
                                           pdSize: "S",
@@ -64,7 +104,7 @@ struct CartModel {
                                           pdQuantity: "1",
                                           pdPrice: "150")
 
-        return [product_1, product_2, product_3]
+        return [product_1, product_2, product_3, product_4, product_5, product_6, product_7, product_8]
     }
     
 }
