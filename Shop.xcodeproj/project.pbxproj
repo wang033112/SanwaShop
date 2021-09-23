@@ -29,7 +29,7 @@
 		059934FE258899A200302D5F /* LikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059934FD258899A200302D5F /* LikeViewController.swift */; };
 		05993506258899B300302D5F /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05993505258899B300302D5F /* CartViewController.swift */; };
 		0599350B258899CD00302D5F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0599350A258899CD00302D5F /* SearchViewController.swift */; };
-		0599353425889D7500302D5F /* RYJBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0599353325889D7500302D5F /* RYJBaseViewController.swift */; };
+		0599353425889D7500302D5F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0599353325889D7500302D5F /* BaseViewController.swift */; };
 		05B077F8259180CD00DAC557 /* HomeBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B077F7259180CD00DAC557 /* HomeBannerView.swift */; };
 		05B078122591BCFB00DAC557 /* HomeLikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B078112591BCFB00DAC557 /* HomeLikeView.swift */; };
 		05B33E6E2588A881002DE0E0 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B33E6D2588A881002DE0E0 /* UIColorExtension.swift */; };
@@ -41,7 +41,22 @@
 		05EC762E259C6E3800EF86E5 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC762D259C6E3800EF86E5 /* CheckoutViewController.swift */; };
 		05EC7633259C71F900EF86E5 /* CheckoutProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC7632259C71F900EF86E5 /* CheckoutProgressView.swift */; };
 		05EC7638259C7EBD00EF86E5 /* CheckoutShipmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC7637259C7EBD00EF86E5 /* CheckoutShipmentView.swift */; };
+		A03E06372674790700A92084 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03E06362674790700A92084 /* CategoryViewController.swift */; };
+		A03E06402674796C00A92084 /* RightTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03E063C2674796B00A92084 /* RightTableModel.swift */; };
+		A03E06412674796C00A92084 /* RightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03E063D2674796B00A92084 /* RightTableViewCell.swift */; };
+		A03E06422674796C00A92084 /* LeftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03E063E2674796B00A92084 /* LeftTableViewCell.swift */; };
+		A03E06432674796C00A92084 /* RightTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03E063F2674796C00A92084 /* RightTableViewHeader.swift */; };
+		A074C223266CD9EF0071309C /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074C222266CD9EF0071309C /* ViewExtension.swift */; };
+		A0A5BEF0266357C700168D19 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A5BEEF266357C700168D19 /* HomeTableViewController.swift */; };
+		A0A5BEF5266359D000168D19 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A5BEF4266359D000168D19 /* ProductModel.swift */; };
+		A0A5BEFB26635A4300168D19 /* DammyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A5BEFA26635A4300168D19 /* DammyData.swift */; };
+		A0A5BF0326635B9000168D19 /* ScrollContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A5BF0226635B9000168D19 /* ScrollContentView.swift */; };
+		A0A5BF0826635BF400168D19 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A5BF0726635BF400168D19 /* PaddingLabel.swift */; };
 		A0AFAF6126469D4B00BB9EC6 /* SanwaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AFAF6026469D4B00BB9EC6 /* SanwaAPI.swift */; };
+		A0B71F7B266B46A800D85982 /* UMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B71F7A266B46A800D85982 /* UMineViewController.swift */; };
+		A0B71F83266B470C00D85982 /* UMineHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B71F82266B470C00D85982 /* UMineHead.swift */; };
+		A0B71F88266B473800D85982 /* USettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B71F87266B473800D85982 /* USettingViewController.swift */; };
+		A0DAAE34265A63CB0052C68F /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DAAE33265A63CB0052C68F /* CustomTabView.swift */; };
 		F1104AE21A413B89C1431297 /* Pods_Shop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62232979554C1DE5EBCFE44E /* Pods_Shop.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,7 +106,7 @@
 		059934FD258899A200302D5F /* LikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeViewController.swift; sourceTree = "<group>"; };
 		05993505258899B300302D5F /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		0599350A258899CD00302D5F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		0599353325889D7500302D5F /* RYJBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RYJBaseViewController.swift; sourceTree = "<group>"; };
+		0599353325889D7500302D5F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		05B077F7259180CD00DAC557 /* HomeBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerView.swift; sourceTree = "<group>"; };
 		05B078112591BCFB00DAC557 /* HomeLikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLikeView.swift; sourceTree = "<group>"; };
 		05B33E6D2588A881002DE0E0 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -105,7 +120,22 @@
 		05EC7637259C7EBD00EF86E5 /* CheckoutShipmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutShipmentView.swift; sourceTree = "<group>"; };
 		48AD86BB4D9D2C09269781E6 /* Pods-Shop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shop.debug.xcconfig"; path = "Target Support Files/Pods-Shop/Pods-Shop.debug.xcconfig"; sourceTree = "<group>"; };
 		62232979554C1DE5EBCFE44E /* Pods_Shop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A03E06362674790700A92084 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		A03E063C2674796B00A92084 /* RightTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightTableModel.swift; sourceTree = "<group>"; };
+		A03E063D2674796B00A92084 /* RightTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightTableViewCell.swift; sourceTree = "<group>"; };
+		A03E063E2674796B00A92084 /* LeftTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftTableViewCell.swift; sourceTree = "<group>"; };
+		A03E063F2674796C00A92084 /* RightTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightTableViewHeader.swift; sourceTree = "<group>"; };
+		A074C222266CD9EF0071309C /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		A0A5BEEF266357C700168D19 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		A0A5BEF4266359D000168D19 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		A0A5BEFA26635A4300168D19 /* DammyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DammyData.swift; sourceTree = "<group>"; };
+		A0A5BF0226635B9000168D19 /* ScrollContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollContentView.swift; sourceTree = "<group>"; };
+		A0A5BF0726635BF400168D19 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		A0AFAF6026469D4B00BB9EC6 /* SanwaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanwaAPI.swift; sourceTree = "<group>"; };
+		A0B71F7A266B46A800D85982 /* UMineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UMineViewController.swift; sourceTree = "<group>"; };
+		A0B71F82266B470C00D85982 /* UMineHead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UMineHead.swift; sourceTree = "<group>"; };
+		A0B71F87266B473800D85982 /* USettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USettingViewController.swift; sourceTree = "<group>"; };
+		A0DAAE33265A63CB0052C68F /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		D578FECD44BDDA7737868D7F /* Pods-Shop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shop.release.xcconfig"; path = "Target Support Files/Pods-Shop/Pods-Shop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +200,9 @@
 		0589F491258733A6005F9EF6 /* Shop */ = {
 			isa = PBXGroup;
 			children = (
+				A03E0634267478D600A92084 /* Category */,
+				A0B71F77266B466700D85982 /* Mine */,
+				A0A5BEF926635A2500168D19 /* Utils */,
 				0589F4D725874625005F9EF6 /* Home */,
 				059934FA2588991A00302D5F /* Like */,
 				059934FB2588994C00302D5F /* Cart */,
@@ -214,11 +247,12 @@
 		0589F4D825874647005F9EF6 /* System */ = {
 			isa = PBXGroup;
 			children = (
+				A0DAAE33265A63CB0052C68F /* CustomTabView.swift */,
 				053DBBAC25A45FAD003C4CB1 /* Network */,
 				058E1B9525907FDF00E678FD /* Refresh */,
 				0589F492258733A6005F9EF6 /* AppDelegate.swift */,
 				0589F4D225874562005F9EF6 /* TabBarController.swift */,
-				0599353325889D7500302D5F /* RYJBaseViewController.swift */,
+				0599353325889D7500302D5F /* BaseViewController.swift */,
 				05B33E782588B1A4002DE0E0 /* Global.swift */,
 			);
 			path = System;
@@ -302,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				0589F4D9258746AD005F9EF6 /* HomeViewController.swift */,
+				A0A5BEEF266357C700168D19 /* HomeTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -310,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				058B18A1259474A000D8F5A3 /* HomeModel.swift */,
+				A0A5BEF4266359D000168D19 /* ProductModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -320,6 +356,8 @@
 				058B189C25946C8600D8F5A3 /* LFFPraiseButton.swift */,
 				05B077F7259180CD00DAC557 /* HomeBannerView.swift */,
 				05B078112591BCFB00DAC557 /* HomeLikeView.swift */,
+				A0A5BF0226635B9000168D19 /* ScrollContentView.swift */,
+				A0A5BF0726635BF400168D19 /* PaddingLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -352,6 +390,7 @@
 			isa = PBXGroup;
 			children = (
 				05B33E6D2588A881002DE0E0 /* UIColorExtension.swift */,
+				A074C222266CD9EF0071309C /* ViewExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -430,6 +469,68 @@
 				62232979554C1DE5EBCFE44E /* Pods_Shop.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A03E0634267478D600A92084 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				A03E063B2674794C00A92084 /* View */,
+				A03E0635267478EB00A92084 /* Controller */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		A03E0635267478EB00A92084 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A03E06362674790700A92084 /* CategoryViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A03E063B2674794C00A92084 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A03E063E2674796B00A92084 /* LeftTableViewCell.swift */,
+				A03E063C2674796B00A92084 /* RightTableModel.swift */,
+				A03E063D2674796B00A92084 /* RightTableViewCell.swift */,
+				A03E063F2674796C00A92084 /* RightTableViewHeader.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A0A5BEF926635A2500168D19 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A0A5BEFA26635A4300168D19 /* DammyData.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A0B71F77266B466700D85982 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				A0B71F79266B468D00D85982 /* View */,
+				A0B71F78266B468000D85982 /* Controller */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		A0B71F78266B468000D85982 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A0B71F87266B473800D85982 /* USettingViewController.swift */,
+				A0B71F7A266B46A800D85982 /* UMineViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A0B71F79266B468D00D85982 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A0B71F82266B470C00D85982 /* UMineHead.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F932E496ABBAAC96368E7DC8 /* Pods */ = {
@@ -615,15 +716,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0B71F88266B473800D85982 /* USettingViewController.swift in Sources */,
+				A0A5BEFB26635A4300168D19 /* DammyData.swift in Sources */,
 				05B078122591BCFB00DAC557 /* HomeLikeView.swift in Sources */,
 				0599350B258899CD00302D5F /* SearchViewController.swift in Sources */,
 				05EC75C0259C2C1E00EF86E5 /* DetailDescribeView.swift in Sources */,
 				05993506258899B300302D5F /* CartViewController.swift in Sources */,
 				053DBBAE25A45FD1003C4CB1 /* ShopAPI.swift in Sources */,
+				A0B71F83266B470C00D85982 /* UMineHead.swift in Sources */,
+				A03E06432674796C00A92084 /* RightTableViewHeader.swift in Sources */,
+				A03E06372674790700A92084 /* CategoryViewController.swift in Sources */,
+				A03E06412674796C00A92084 /* RightTableViewCell.swift in Sources */,
 				05B33E832588BA45002DE0E0 /* SearchRankingView.swift in Sources */,
 				05EC75BB259C1CAA00EF86E5 /* DetailHeaderView.swift in Sources */,
+				A03E06422674796C00A92084 /* LeftTableViewCell.swift in Sources */,
+				A0A5BEF5266359D000168D19 /* ProductModel.swift in Sources */,
 				058B189D25946C8700D8F5A3 /* LFFPraiseButton.swift in Sources */,
+				A0A5BEF0266357C700168D19 /* HomeTableViewController.swift in Sources */,
 				052B7FD0258C9B16003AF68B /* CartDiscountView.swift in Sources */,
+				A074C223266CD9EF0071309C /* ViewExtension.swift in Sources */,
+				A0B71F7B266B46A800D85982 /* UMineViewController.swift in Sources */,
 				053DBBB325A464DE003C4CB1 /* ShopModel.swift in Sources */,
 				058E1B7D25902E4C00E678FD /* CartListView.swift in Sources */,
 				053D63E3258AEA9D009567D4 /* SearchRecentView.swift in Sources */,
@@ -635,14 +747,18 @@
 				05EC7638259C7EBD00EF86E5 /* CheckoutShipmentView.swift in Sources */,
 				0589F493258733A6005F9EF6 /* AppDelegate.swift in Sources */,
 				05B33E6E2588A881002DE0E0 /* UIColorExtension.swift in Sources */,
-				0599353425889D7500302D5F /* RYJBaseViewController.swift in Sources */,
+				0599353425889D7500302D5F /* BaseViewController.swift in Sources */,
+				A0A5BF0826635BF400168D19 /* PaddingLabel.swift in Sources */,
+				A0DAAE34265A63CB0052C68F /* CustomTabView.swift in Sources */,
 				0589F4DA258746AD005F9EF6 /* HomeViewController.swift in Sources */,
 				05EC762E259C6E3800EF86E5 /* CheckoutViewController.swift in Sources */,
 				05EC75B3259C165800EF86E5 /* DetailViewController.swift in Sources */,
 				058E1B972590800500E678FD /* RYJRefresh.swift in Sources */,
+				A03E06402674796C00A92084 /* RightTableModel.swift in Sources */,
 				058B18A2259474A000D8F5A3 /* HomeModel.swift in Sources */,
 				058E1B8B2590416400E678FD /* CartModel.swift in Sources */,
 				05B077F8259180CD00DAC557 /* HomeBannerView.swift in Sources */,
+				A0A5BF0326635B9000168D19 /* ScrollContentView.swift in Sources */,
 				05B33E792588B1A4002DE0E0 /* Global.swift in Sources */,
 				059934FE258899A200302D5F /* LikeViewController.swift in Sources */,
 			);

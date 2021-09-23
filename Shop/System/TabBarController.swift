@@ -20,9 +20,9 @@ class TabBarController: UITabBarController {
                                image: UIImage(named: "tabbar_home"),
                                selectedImage: UIImage(named: "tabbar_home_sel"))
         
-        // Like
-        let liekVC = LikeViewController()
-        addChildViewController(liekVC,
+        // Category
+        let categoryVC = CategoryViewController()
+        addChildViewController(categoryVC,
                                image: UIImage(named: "tabbar_like"),
                                selectedImage: UIImage(named: "tabbar_like_sel"))
         
